@@ -1,0 +1,1 @@
+CREATE TABLE WorkerV2 AS SELECT * FROM Worker;

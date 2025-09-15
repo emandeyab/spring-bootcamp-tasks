@@ -1,0 +1,1 @@
+SELECT COUNT(*) FROM Worker WHERE DEPARTMENT = 'Admin';
