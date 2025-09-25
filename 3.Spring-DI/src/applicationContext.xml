@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <context:property-placeholder location="classpath:application.properties"/>
+
+    <!-- Define your beans here -->
+    <bean id="draw2d" class="com.spring.di.task1.Draw2d">
+    </bean>
+
+    <bean id="draw3d" class="com.spring.di.task1.Draw3d">
+    </bean>
+
+    <bean id="circle" class="com.spring.di.task1.Circle" scope="singleton">
+        <constructor-arg ref="draw2d"></constructor-arg>
+        <constructor-arg ref="draw3d"></constructor-arg>
+    </bean>
+
+    <bean id="square" class="com.spring.di.task1.Square" scope="prototype">
+        <property name="draw2d" ref="draw2d"></property>
+        <property name="draw3d" ref="draw3d"></property>
+    </bean>
+
+    <bean id="init"  class="com.spring.di.task1.DatabaseOperations"
+          init-method="connectToDatabase">
+    </bean>
+
+    <bean id="destroy "  class="com.spring.di.task1.DatabaseOperations"
+          destroy-method="disconnectFromDatabase">
+    </bean>
+
+
+
+<!--    ////////////////////////////////////////////////////////////   -->
+    <bean id="database" class="com.spring.di.task2.Database">
+        <property name="url" value="${database.url}" />
+        <property name="username" value="${database.username}" />
+        <property name="password" value="${database.password}" />
+    </bean>
+
+    <bean id="car" class="com.spring.di.task2.Car">
+        <constructor-arg ref="database"></constructor-arg>
+    </bean>
+
+    <bean id="plane" class="com.spring.di.task2.Plane">
+        <property name="database" ref="database"/>
+    </bean>
+</beans>
+
+
+
+
+
