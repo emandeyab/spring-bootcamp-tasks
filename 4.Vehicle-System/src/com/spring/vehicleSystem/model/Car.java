@@ -1,6 +1,7 @@
 package com.spring.vehicleSystem.model;
 
 import com.spring.vehicleSystem.dao.DatabaseOperations;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Component;
 @Scope("prototype")
 @Setter
 @Getter
+@AllArgsConstructor
 public class Car implements Vehicle{
     private DatabaseOperations databaseOperations;
     private int id;
