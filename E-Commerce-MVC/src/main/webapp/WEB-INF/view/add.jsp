@@ -32,7 +32,7 @@
         </div>
     </div>
     <br>
-    <input type="submit">
+    <input type="submit" value="Add Product">
 </form:form>
 </body>
 </html>
