@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "df62a8ec-d4d8-45a5-9e3a-d00ed7823787",
+		"name": "ProductApis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "50657658"
+	},
+	"item": [
+		{
+			"name": "Add new product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"available\": true,\r\n  \"expirationDate\": \"2025-12-20\",\r\n  \"manufacturer\": \"Samsung\",\r\n  \"name\": \"Mobile Phone\",\r\n  \"price\": 15000,\r\n  \"product\": {\r\n    \"name\": \"Electronics\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/ProductApis/api/products/details"
+			},
+			"response": []
+		},
+		{
+			"name": "Update product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 17,\r\n  \"available\": true,\r\n  \"expirationDate\": \"2025-12-28\",\r\n  \"name\": \"vvvvvvv\",\r\n  \"manufacturer\": \"updated\",\r\n  \"price\": 15000,\r\n  \"product\": {\r\n      \"id\": 17,\r\n      \"name\": \"vvvvv\"\r\n  }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/ProductApis/api/products/details/17"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/ProductApis/api/products/14"
+			},
+			"response": []
+		},
+		{
+			"name": "Get product by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/ProductApis/api/products/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Get product details by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/ProductApis/api/products/details/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Get all products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/ProductApis/api/products"
+			},
+			"response": []
+		},
+		{
+			"name": "Get product details by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/ProductApis/api/products/details/name/Brown Bread"
+			},
+			"response": []
+		}
+	]
+}
