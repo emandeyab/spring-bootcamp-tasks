@@ -1,6 +1,6 @@
 # Spring Bootcamp
 
-This repository contains all tasks, projects, and practice work completed during the **Java Web Developer Bootcamp**.  
+This repository contains all tasks, projects, and practice work completed during the **Java Backend Developer Bootcamp**.  
 The bootcamp focuses on building **enterprise-scale backend applications** using **Java and the Spring ecosystem**.
 
 ---
