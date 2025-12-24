@@ -39,5 +39,3 @@ Throughout the training, I worked on implementing backend concepts, building RES
 - CSS  
 - Bootstrap  
 - Angular  
-## 📂 Repository Structure
-
